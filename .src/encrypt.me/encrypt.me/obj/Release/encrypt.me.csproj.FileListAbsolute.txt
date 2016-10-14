@@ -1,0 +1,4 @@
+C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\bin\Release\encrypt.me.exe
+C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\bin\Release\encrypt.me.pdb
+C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\obj\Release\encrypt.me.exe
+C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\obj\Release\encrypt.me.pdb
