@@ -1,4 +1,3 @@
-C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\bin\Debug\encrypt.me.exe.config
 C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\bin\Debug\encrypt.me.exe
 C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\bin\Debug\encrypt.me.pdb
 C:\Users\AhriFox950\Desktop\encrypt.me\encrypt.me\.src\encrypt.me\encrypt.me\obj\Debug\encrypt.me.csprojResolveAssemblyReference.cache

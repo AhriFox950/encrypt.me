@@ -20,13 +20,16 @@ namespace encrypt.me
         /// <param name="args">Command line arguments</param>
         static void Main(string[] args)
         {
-            // Call the main logic method with the command line arguments.
+            // Try to convert to an float.
+            float a;
+            if (float.TryParse(args[1], out a)) { }
+            Data.fillData(a);
+
             Key key = new Key();
-            int _key = 1;
-            if (int.TryParse(args[0], out _key))
-            {
-                
-            }
+  
+            Console.WriteLine(Logic.GetEncryptedString(args[0], (a)));
+        
+
         }
     }
 
@@ -35,9 +38,9 @@ namespace encrypt.me
     /// </summary>
     class Logic
     {
-        public void Encrypt(string raw)
+        public static string GetEncryptedString(string raw, float key)
         {
-
+            return RawToEnc(raw, key);
         }
 
         /// <summary>
@@ -45,13 +48,28 @@ namespace encrypt.me
         /// </summary>
         /// <param name="raw"></param>
         /// <returns></returns>
-        public string RawToEnc(string raw, int key)
+        public static string RawToEnc(string raw, float key)
         {
             // First, setup the prefix and the suffex (random numbers)
             Random rnd = new Random();
             string pre = rnd.Next(999).ToString().PadLeft(3, '0');
             string suf = rnd.Next(999).ToString().PadLeft(3, '0');
-            return "";
+            string toReturn = "";
+            char[] a = { '-' };
+
+            // Init the database.
+            Data.fillData(key);
+
+            foreach (char c in raw)
+            {
+                toReturn += Data.database[c];
+                toReturn += '-';
+            }
+
+            toReturn = toReturn.Remove(toReturn.Length - 1);
+
+
+            return toReturn;
         }
     }
 
