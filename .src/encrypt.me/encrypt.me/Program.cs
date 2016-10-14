@@ -21,6 +21,12 @@ namespace encrypt.me
         static void Main(string[] args)
         {
             // Call the main logic method with the command line arguments.
+            Key key = new Key();
+            int _key = 1;
+            if (int.TryParse(args[0], out _key))
+            {
+                
+            }
         }
     }
 
@@ -39,9 +45,37 @@ namespace encrypt.me
         /// </summary>
         /// <param name="raw"></param>
         /// <returns></returns>
-        public string RawToEnc(string raw)
+        public string RawToEnc(string raw, int key)
         {
+            // First, setup the prefix and the suffex (random numbers)
+            Random rnd = new Random();
+            string pre = rnd.Next(999).ToString().PadLeft(3, '0');
+            string suf = rnd.Next(999).ToString().PadLeft(3, '0');
             return "";
         }
     }
+
+    /// <summary>
+    /// This class is used to store the key.
+    /// </summary>
+    class Key
+    {
+        private int _key;
+        public int key
+        {
+            get { return _key; }
+            set
+            {
+                if (_key > 0 || _key < 999)
+                {
+                    throw new Exception("Out of key range");                
+                }
+                else
+                {
+                    _key = value;
+                }
+            }
+        }
+    }
+
 }
